@@ -515,29 +515,44 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 .hero-ctas{animation:fU .55s ease .3s both}
 .hero-stats{animation:fU .55s ease .4s both}
 </style>
-<style id="claude-agent-animation-styles">
-      @keyframes claude-pulse {
-        0% {
-          box-shadow: 
-            inset 0 0 10px rgba(217, 119, 87, 0.5),
-            inset 0 0 20px rgba(217, 119, 87, 0.3),
-            inset 0 0 30px rgba(217, 119, 87, 0.1);
-        }
-        50% {
-          box-shadow: 
-            inset 0 0 15px rgba(217, 119, 87, 0.7),
-            inset 0 0 25px rgba(217, 119, 87, 0.5),
-            inset 0 0 35px rgba(217, 119, 87, 0.2);
-        }
-        100% {
-          box-shadow: 
-            inset 0 0 10px rgba(217, 119, 87, 0.5),
-            inset 0 0 20px rgba(217, 119, 87, 0.3),
-            inset 0 0 30px rgba(217, 119, 87, 0.1);
-        }
-      }
-    </style></head>
-<body data-new-gr-c-s-check-loaded="14.1278.0" data-gr-ext-installed="">
+
+<style id="courses-extra-styles">
+/* ── COURSES PAGE 追加スタイル ── */
+.cd-fee-wrap{margin-top:36px;overflow-x:auto}
+.cd-fee-tbl{width:100%;border-collapse:collapse;font-family:var(--f-j)}
+.cd-fee-tbl th{background:var(--navy);color:white;padding:13px 18px;text-align:left;font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.cd-fee-tbl td{padding:13px 18px;font-size:14px;border-bottom:1px solid var(--border);vertical-align:middle;line-height:1.6}
+.cd-fee-tbl tr:nth-child(even) td{background:var(--blush)}
+.cd-fee-tbl tr:last-child td{border-bottom:none}
+.price-main{font-family:var(--f-c);font-size:20px;font-weight:700;color:var(--red);letter-spacing:.02em}
+.price-sub{font-size:12px;color:var(--muted);margin-top:2px;font-weight:300}
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:2px;background:var(--gold);color:var(--navy);font-family:var(--f-c);letter-spacing:.06em;margin-left:4px;margin-right:2px;vertical-align:middle}
+.badge-red{background:var(--red);color:white}
+.schedule-row{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+.sched-card{background:white;border-radius:4px;padding:24px 28px;border-top:4px solid var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.sched-label{font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.sched-time{font-family:var(--f-c);font-size:28px;font-weight:700;color:var(--navy);letter-spacing:.02em;line-height:1}
+.sched-days{font-size:12px;color:var(--muted);margin-top:6px;font-family:var(--f-j)}
+.dorm-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.dorm-card{background:white;border-radius:4px;padding:20px 24px;border:1px solid var(--border);border-top:4px solid var(--gold)}
+.dorm-type{font-family:var(--f-c);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+.dorm-price{font-family:var(--f-c);font-size:24px;font-weight:700;color:var(--red)}
+.dorm-unit{font-size:13px;color:var(--muted);margin-left:4px}
+.cd-cta-bar{margin:48px 0 0;background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:8px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cd-cta-lead{font-family:var(--f-c);font-size:22px;font-weight:700;letter-spacing:.04em;color:white;text-transform:uppercase;margin-bottom:6px}
+.cd-cta-lead em{font-family:var(--f-d);font-style:italic;color:var(--gold2);font-weight:400}
+.cd-cta-sub{font-size:13px;color:rgba(255,255,255,.5);font-family:var(--f-j);font-weight:300}
+.cd-cta-btns{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+.cd-cta-contact{font-size:12px;color:rgba(255,255,255,.45);font-family:var(--f-j);margin-top:10px;line-height:1.8}
+.cd-cta-contact strong{color:rgba(255,255,255,.75)}
+.docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.doc-item{background:white;border-radius:4px;padding:14px 16px;border-left:3px solid var(--gold);box-shadow:0 1px 4px rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:10px}
+.doc-ico{font-size:16px;flex-shrink:0;margin-top:1px}
+.doc-txt{font-size:13px;color:var(--ink);font-family:var(--f-j);line-height:1.5}
+</style>
+
+</head>
+<body>
 
 <nav style="background-color: rgb(200, 16, 46);">
   <div class="n-logo" onclick="go('home')" style="">
@@ -653,12 +668,13 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
   </div>
   <div class="bc"><a onclick="go('home')">ホーム</a> › <span>コース</span></div>
   <div class="c-tabs">
-    <div class="ctab" onclick="showC('shinngaku',this)">進学コース</div>
-    <div class="ctab active" onclick="showC('ippan',this)">一般コース</div>
+    <div class="ctab active" onclick="showC('shinngaku',this)">進学コース</div>
+    <div class="ctab" onclick="showC('ippan',this)">一般コース</div>
     <div class="ctab" onclick="showC('tanki',this)">短期コース</div>
   </div>
 
-  <div class="cd" id="cd-shinngaku">
+  <!-- ── 進学コース ── -->
+  <div class="cd active" id="cd-shinngaku">
     <div class="cd-hero">
       <div class="cd-bg" style="background:linear-gradient(160deg,var(--red-d),var(--red),#e0203a)"></div>
       <div class="cd-ov"></div>
@@ -667,7 +683,7 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
         <div class="cd-no">Course 01 — Advancement</div>
         <h2 class="cd-h">ADVANCEMENT<br><em>進学コース</em></h2>
         <div class="cd-ja">University &amp; College Prep</div>
-        <p class="cd-desc">日本の大学・専門学校への進学を目指すコース。入学時期により修業期間は異なります。JLPT N1〜N2の取得と入試対策を並行して行い、夢の進学を実現します。学習内容は一般コースと同等水準。</p>
+        <p class="cd-desc">日本の大学・専門学校への進学を目指すコース。東京校のみ提供。4月入学（2年課程）・10月入学（1.5年課程）の2回入学。JLPT N1〜N2の取得と入試対策を並行して行い、夢の進学を実現します。</p>
         <div class="cd-btns">
           <button class="pill pill-white" onclick="go('admission')">入学を相談する<span class="arr">→</span></button>
           <button class="pill" style="color:rgba(255,255,255,.58);border-color:rgba(255,255,255,.28)" onclick="go('admission')">資料請求<span class="arr">→</span></button>
@@ -680,15 +696,116 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
       <div class="cd-grid">
         <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">🎓</div><div class="cd-ttl">大学・専門学校進学対応</div><p class="cd-txt">国内の大学・専門学校への進学を全面サポート。入試の種類に応じた対策を提供します。</p></div>
         <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">📝</div><div class="cd-ttl">JLPT N1・N2 取得サポート</div><p class="cd-txt">日本語能力試験の合格を目指したカリキュラム。定期的な模擬試験で実力を測定します。</p></div>
-        <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">🗓️</div><div class="cd-ttl">柔軟な入学時期</div><p class="cd-txt">4月・10月など複数の入学時期に対応。修業期間は進学目標・入学時期によって異なります。</p></div>
+        <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">🗓️</div><div class="cd-ttl">柔軟な入学時期</div><p class="cd-txt">4月（2年課程）・10月（1.5年課程）の2回入学。目標に合わせた修業期間を選択できます。</p></div>
         <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">💬</div><div class="cd-ttl">個別進路相談</div><p class="cd-txt">担任教師が一人ひとりの目標に合わせた進路相談を実施。志望校選びから出願まで伴走。</p></div>
         <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">📱</div><div class="cd-ttl">JSL MeTHOD（無料）</div><p class="cd-txt">授業と連動した独自Eラーニングアプリで自習の質を高めます。全学生が無料で利用可能。</p></div>
         <div class="cd-card" style="border-left-color:var(--red)"><div class="cd-icon">🏫</div><div class="cd-ttl">グループ校への進学</div><p class="cd-txt">JSLインターナショナルカレッジ（専門学校）へのスムーズな進学が可能です。</p></div>
       </div>
+
+      <!-- 学費テーブル -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">学費・納入金</div>
+        <div class="h2" style="font-size:30px">TUITION FEES</div>
+        <p class="sub-jp" style="margin-top:6px;margin-bottom:0">東京校 — 入学金・授業料・教材費・消費税込み</p>
+        <div class="cd-fee-wrap">
+          <table class="cd-fee-tbl">
+            <thead>
+              <tr>
+                <th>入学時期</th><th>課程</th>
+                <th>学費合計（税込）</th>
+                <th>MeTHOD使用料込み納入金</th>
+                <th>出願締切</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-red">4月入学</span></td>
+                <td>2年課程</td>
+                <td><div class="price-main">858,000円</div><div class="price-sub">入学金・授業料・教材費・消費税込み</div></td>
+                <td><div class="price-main">942,000円</div><div class="price-sub">MeTHOD使用料 84,000円含む</div></td>
+                <td style="font-family:var(--f-j);font-size:13px">10月中旬</td>
+              </tr>
+              <tr>
+                <td><span class="badge">10月入学</span></td>
+                <td>1.5年課程</td>
+                <td><div class="price-main">858,000円</div><div class="price-sub">入学金・授業料・教材費・消費税込み</div></td>
+                <td><div class="price-main">921,000円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+                <td style="font-family:var(--f-j);font-size:13px">4月中旬</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px;font-family:var(--f-j)">※ 上記は東京校の金額です。詳細・最新情報はお問い合わせください。</p>
+      </div>
+
+      <!-- 入学時期カレンダー -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">入学時期カレンダー</div>
+        <div class="h2" style="font-size:30px">INTAKE CALENDAR</div>
+        <p class="sub-jp" style="margin-top:6px;margin-bottom:20px">出願締切と授業開始月の目安（東京校）</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:white;border-radius:6px;padding:18px 22px;border-top:4px solid var(--red);box-shadow:0 2px 8px rgba(0,0,0,.05)">
+            <div style="font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px">4月入学 / 2年課程</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="font-size:18px">📅</span>
+              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">出願締切：<strong>10月中旬</strong></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:18px">🏫</span>
+              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">授業開始：<strong>翌年4月</strong></span>
+            </div>
+          </div>
+          <div style="background:white;border-radius:6px;padding:18px 22px;border-top:4px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.05)">
+            <div style="font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">10月入学 / 1.5年課程</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="font-size:18px">📅</span>
+              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">出願締切：<strong>4月中旬</strong></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:18px">🏫</span>
+              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">授業開始：<strong>同年10月</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 授業時間 -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">授業時間</div>
+        <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
+        <div class="schedule-row">
+          <div class="sched-card">
+            <div class="sched-label">☀️ 午前の部</div>
+            <div class="sched-time">9:10 — 12:30</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+          <div class="sched-card" style="border-top-color:var(--red)">
+            <div class="sched-label">🌤 午後の部</div>
+            <div class="sched-time">14:00 — 17:20</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTAバー -->
+      <div class="cd-cta-bar" style="margin-top:48px">
+        <div>
+          <div class="cd-cta-lead">まずは<em>無料相談</em>から</div>
+          <div class="cd-cta-sub">入学時期・学費・ビザについてお気軽にお問い合わせください</div>
+          <div class="cd-cta-contact">
+            <strong>東京校</strong>　📞 03-5823-4245　|　✉️ jsltokyo@jslnippon.jp
+          </div>
+        </div>
+        <div class="cd-cta-btns">
+          <button class="pill pill-gold" onclick="go('admission')" style="font-size:13px">無料相談する<span class="arr">→</span></button>
+          <button class="pill" onclick="go('admission')" style="font-size:13px;color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3)">資料請求（無料）<span class="arr">→</span></button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="cd active" id="cd-ippan">
+  <!-- ── 一般コース ── -->
+  <div class="cd" id="cd-ippan">
     <div class="cd-hero">
       <div class="cd-bg" style="background:linear-gradient(160deg,var(--navy),var(--navy2),var(--navy3))"></div>
       <div class="cd-ov"></div>
@@ -697,7 +814,7 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
         <div class="cd-no">Course 02 — General</div>
         <h2 class="cd-h">GENERAL<br><em>一般コース</em></h2>
         <div class="cd-ja">Career &amp; Life in Japan</div>
-        <p class="cd-desc">1年間コース。学習内容は進学コースと同等水準で、特定技能・技人国での就職や帰国後のキャリアなど、進学以外の多様な目標に対応します。</p>
+        <p class="cd-desc">東京校（4月・10月入学 / 1年課程）と沖縄校（4月・7月・10月・1月入学 / 9〜15ヶ月）。就職・帰国後のキャリアなど多様な目標に対応。学習水準は進学コースと同等です。</p>
         <div class="cd-btns">
           <button class="pill pill-white" onclick="go('admission')">入学を相談する<span class="arr">→</span></button>
           <button class="pill" style="color:rgba(255,255,255,.58);border-color:rgba(255,255,255,.28)" onclick="go('admission')">資料請求<span class="arr">→</span></button>
@@ -709,15 +826,130 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
       <div class="h2" style="font-size:36px">FEATURES</div>
       <div class="cd-grid">
         <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">💼</div><div class="cd-ttl">就職サポート（特定技能・技人国）</div><p class="cd-txt">日本での就労ビザ取得を視野に入れたカリキュラム。就職活動サポートも充実しています。</p></div>
-        <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">📅</div><div class="cd-ttl">1年間コース</div><p class="cd-txt">1年間でしっかりと日本語を習得できるカリキュラム設計。着実に上達できます。</p></div>
+        <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">📅</div><div class="cd-ttl">東京・沖縄 2校対応</div><p class="cd-txt">東京は4月・10月入学（1年課程）。沖縄は4月・7月・10月・1月入学（各9〜15ヶ月）と柔軟です。</p></div>
         <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">📊</div><div class="cd-ttl">進学コースと同等水準</div><p class="cd-txt">質の高い授業は進学コースと変わりません。目標に応じた個別サポートを追加。</p></div>
         <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">🌏</div><div class="cd-ttl">帰国後のキャリア相談</div><p class="cd-txt">日本語力を活かして母国でキャリアを築きたい方へのアドバイスも提供します。</p></div>
         <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">🗣️</div><div class="cd-ttl">ビジネス日本語・敬語</div><p class="cd-txt">日本の職場で必要なビジネスマナーや敬語表現もカバー。即戦力として活躍できる日本語力を養います。</p></div>
         <div class="cd-card" style="border-left-color:var(--navy2)"><div class="cd-icon">📱</div><div class="cd-ttl">JSL MeTHOD（無料）</div><p class="cd-txt">授業と連動したEラーニングで自習をサポート。全学生が追加費用なしで利用可能。</p></div>
       </div>
+
+      <!-- 学費テーブル -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">学費・納入金</div>
+        <div class="h2" style="font-size:30px">TUITION FEES</div>
+        <p class="sub-jp" style="margin-top:6px;margin-bottom:0">東京校・沖縄校の比較</p>
+        <div class="cd-fee-wrap">
+          <table class="cd-fee-tbl">
+            <thead>
+              <tr>
+                <th>キャンパス</th><th>入学時期</th><th>期間</th>
+                <th>学費合計（税込）</th>
+                <th>MeTHOD使用料込み納入金</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🗼 東京校</strong></td>
+                <td><span class="badge badge-red">4月</span><span class="badge">10月</span></td>
+                <td>1年課程</td>
+                <td><div class="price-main">858,000円</div></td>
+                <td><div class="price-main">900,000円</div></td>
+              </tr>
+              <tr>
+                <td><strong>🌺 沖縄校</strong></td>
+                <td><span class="badge badge-red">4月</span><span class="badge">7月</span><span class="badge">10月</span><span class="badge">1月</span></td>
+                <td>9〜15ヶ月</td>
+                <td><div class="price-main">792,000円</div></td>
+                <td><div class="price-main">834,000円</div><div class="price-sub">〜865,500円（期間による）</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px;font-family:var(--f-j)">※ 入学金・授業料・教材費・消費税込み。沖縄校は期間により納入金が異なります。</p>
+      </div>
+
+      <!-- 沖縄寮情報 -->
+      <div style="margin-top:36px;background:white;border-radius:8px;padding:28px 32px;border:1px solid var(--border)">
+        <div class="eyebrow">沖縄校 寮情報</div>
+        <div class="h2" style="font-size:26px">DORMITORY</div>
+        <p class="sub-jp" style="margin-top:4px;margin-bottom:0">沖縄校には学生寮があります</p>
+        <div class="dorm-cards">
+          <div class="dorm-card">
+            <div class="dorm-type">🛏 1人部屋</div>
+            <div><span class="dorm-price">780,000<span class="dorm-unit">円 / 年</span></span></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;font-family:var(--f-j)">プライベート空間で集中して学習できる個室タイプ</div>
+          </div>
+          <div class="dorm-card">
+            <div class="dorm-type">🛏🛏 2人部屋</div>
+            <div><span class="dorm-price">540,000<span class="dorm-unit">円 / 年</span></span></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:8px;font-family:var(--f-j)">ルームメイトと交流しながら生活できるシェアタイプ</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px;font-family:var(--f-j)">※ 寮の空き状況はお問い合わせ時にご確認ください。</p>
+      </div>
+
+      <!-- 入学時期カレンダー -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">入学時期カレンダー</div>
+        <div class="h2" style="font-size:30px">INTAKE CALENDAR</div>
+        <p class="sub-jp" style="margin-top:6px;margin-bottom:20px">授業開始月の目安</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div>
+            <div style="font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ink);margin-bottom:12px;text-transform:uppercase">🗼 東京校</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div style="background:var(--red);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">4月</div><div style="font-size:11px;opacity:.8">1年課程</div></div>
+              <div style="background:var(--gold);color:var(--navy);border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">10月</div><div style="font-size:11px;opacity:.8">1年課程</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ink);margin-bottom:12px;text-transform:uppercase">🌺 沖縄校</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div style="background:var(--navy);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">4月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
+              <div style="background:var(--navy2);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">7月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
+              <div style="background:var(--navy);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">10月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
+              <div style="background:var(--navy2);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">1月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 授業時間 -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">授業時間</div>
+        <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
+        <div class="schedule-row">
+          <div class="sched-card" style="border-top-color:var(--navy2)">
+            <div class="sched-label">☀️ 午前の部</div>
+            <div class="sched-time" style="color:var(--navy2)">9:10 — 12:30</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+          <div class="sched-card" style="border-top-color:var(--navy2)">
+            <div class="sched-label">🌤 午後の部</div>
+            <div class="sched-time" style="color:var(--navy2)">14:00 — 17:20</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTAバー -->
+      <div class="cd-cta-bar" style="margin-top:48px;background:linear-gradient(135deg,var(--navy2),var(--navy3))">
+        <div>
+          <div class="cd-cta-lead">まずは<em>無料相談</em>から</div>
+          <div class="cd-cta-sub">東京・沖縄、どちらのキャンパスも無料でご相談いただけます</div>
+          <div class="cd-cta-contact">
+            <strong>東京校</strong>　📞 03-5823-4245　|　✉️ jsltokyo@jslnippon.jp<br>
+            <strong>沖縄校</strong>　📞 098-875-1456　|　✉️ jslokinawa@jslnippon.jp
+          </div>
+        </div>
+        <div class="cd-cta-btns">
+          <button class="pill pill-gold" onclick="go('admission')" style="font-size:13px">無料相談する<span class="arr">→</span></button>
+          <button class="pill" onclick="go('admission')" style="font-size:13px;color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3)">資料請求（無料）<span class="arr">→</span></button>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- ── 短期コース ── -->
   <div class="cd" id="cd-tanki">
     <div class="cd-hero">
       <div class="cd-bg" style="background:linear-gradient(160deg,#7a5f14,var(--gold),var(--gold2))"></div>
@@ -745,14 +977,71 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
         <div class="cd-card" style="border-left-color:var(--gold)"><div class="cd-icon">🔄</div><div class="cd-ttl">柔軟なスケジュール</div><p class="cd-txt">2週間〜3ヶ月が基本。在住外国人はビザ有効期間ずっと継続学習できます。</p></div>
         <div class="cd-card" style="border-left-color:var(--gold)"><div class="cd-icon">📱</div><div class="cd-ttl">JSL MeTHOD（無料）</div><p class="cd-txt">短期コースの学生も自習サポートアプリMeTHODが無料で使えます。</p></div>
       </div>
+
+      <!-- 授業時間 -->
+      <div style="margin-top:48px">
+        <div class="eyebrow">授業時間</div>
+        <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
+        <div class="schedule-row">
+          <div class="sched-card" style="border-top-color:var(--gold)">
+            <div class="sched-label">☀️ 午前の部</div>
+            <div class="sched-time" style="color:var(--gold)">9:10 — 12:30</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+          <div class="sched-card" style="border-top-color:var(--gold)">
+            <div class="sched-label">🌤 午後の部</div>
+            <div class="sched-time" style="color:var(--gold)">14:00 — 17:20</div>
+            <div class="sched-days">月曜日〜金曜日</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 短期コースCTA：お問い合わせください -->
+      <div style="margin-top:48px;background:var(--blush);border-radius:8px;padding:48px 40px;text-align:center;border:2px dashed var(--gold)">
+        <div style="font-size:48px;margin-bottom:16px">📞</div>
+        <div style="font-family:var(--f-c);font-size:28px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin-bottom:10px">お問い合わせください</div>
+        <p style="font-size:15px;color:var(--muted);font-family:var(--f-j);font-weight:300;max-width:480px;margin:0 auto 32px;line-height:1.85">短期コースの料金・開始日・期間は、ご希望・状況により個別にご案内しています。<br>まずはお気軽にご相談ください。</p>
+        <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+          <div style="background:white;border-radius:6px;padding:18px 24px;border:1px solid var(--border);border-top:3px solid var(--gold);text-align:left;min-width:200px">
+            <div style="font-family:var(--f-c);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">🗼 東京校</div>
+            <div style="font-family:var(--f-s);font-size:17px;font-weight:600;color:var(--ink)">03-5823-4245</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px">jsltokyo@jslnippon.jp</div>
+          </div>
+          <div style="background:white;border-radius:6px;padding:18px 24px;border:1px solid var(--border);border-top:3px solid var(--gold);text-align:left;min-width:200px">
+            <div style="font-family:var(--f-c);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">🌺 沖縄校</div>
+            <div style="font-family:var(--f-s);font-size:17px;font-weight:600;color:var(--ink)">098-875-1456</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px">jslokinawa@jslnippon.jp</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="pill pill-gold" onclick="go('admission')" style="font-size:13px">無料で相談する<span class="arr">→</span></button>
+          <button class="pill pill-navy" onclick="go('admission')" style="font-size:13px">資料請求（無料）<span class="arr">→</span></button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━
-     CAMPUSES PAGE
-━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<div class="page" id="page-campuses">
+  <!-- ── 共通：必要書類 ── -->
+  <div style="padding:56px 60px;background:var(--blush)">
+    <div class="eyebrow">入学に必要な書類</div>
+    <div class="h2" style="font-size:30px">REQUIRED DOCUMENTS</div>
+    <p class="sub-jp" style="margin-top:8px;margin-bottom:0">進学・一般コースの出願に必要な書類（短期コースは別途ご案内）</p>
+    <div class="docs-grid">
+      <div class="doc-item"><div class="doc-ico">📋</div><div class="doc-txt">入学願書</div></div>
+      <div class="doc-item"><div class="doc-ico">✍️</div><div class="doc-txt">就学理由書</div></div>
+      <div class="doc-item"><div class="doc-ico">💰</div><div class="doc-txt">経費支弁書</div></div>
+      <div class="doc-item"><div class="doc-ico">🎓</div><div class="doc-txt">卒業証書（原本またはコピー）</div></div>
+      <div class="doc-item"><div class="doc-ico">🛂</div><div class="doc-txt">パスポートコピー</div></div>
+      <div class="doc-item"><div class="doc-ico">📷</div><div class="doc-txt">顔写真 5枚</div></div>
+      <div class="doc-item"><div class="doc-ico">📚</div><div class="doc-txt">日本語学習証明書（150時間以上）</div></div>
+      <div class="doc-item"><div class="doc-ico">📄</div><div class="doc-txt">その他、在留資格申請に必要な書類</div></div>
+      <div class="doc-item" style="border-left-color:var(--red)"><div class="doc-ico">❓</div><div class="doc-txt">詳細はお問い合わせください</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px;font-family:var(--f-j)">※ 必要書類は入学時期・国籍・在留資格によって異なる場合があります。スタッフが丁寧にサポートしますので、まずはご相談ください。</p>
+  </div>
+
+</div>
+  <div class="page" id="page-campuses">
   <div class="ph">
     <div class="eyebrow gold">Campuses</div>
     <h1 class="ph-h">LOCATION<br><em>2 Campuses</em></h1>
@@ -1102,4 +1391,4 @@ window.addEventListener('load',()=>{
 </script>
 
 
-<input type="file" id="__hero_upload__" accept="image/*" style="display: none;"><div id="claude-agent-glow-border" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483646; opacity: 1; transition: opacity 0.3s ease-in-out; animation: 2s ease-in-out 0s infinite normal none running claude-pulse; box-shadow: rgba(217, 119, 87, 0.5) 0px 0px 10px inset, rgba(217, 119, 87, 0.3) 0px 0px 20px inset, rgba(217, 119, 87, 0.1) 0px 0px 30px inset;"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</body></html>
