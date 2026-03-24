@@ -1020,194 +1020,348 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━
      ADMISSION PAGE
 ━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<div class="page" id="page-admission">
+<div id="page-admission" class="page">
+
+  <!-- ページヘッダー -->
   <div class="ph">
-    <div class="eyebrow gold">Admission</div>
-    <h1 class="ph-h">ADMISSION<br><em>入学案内</em></h1>
+    <div class="eyebrow white">Admission</div>
+    <div class="ph-h">ADMISSION<br><em>入学案内</em></div>
     <p class="ph-sub">出願から入学まで、丁寧にサポートします。まずはお気軽にご相談ください。</p>
   </div>
-  <div class="bc"><a onclick="go('home')">ホーム</a> › <span>入学案内</span></div>
 
+  <!-- パンくず -->
+  <div class="bc"><a onclick="go('home')">ホーム</a> › 入学案内</div>
+
+  <!-- 1. APPLICATION PROCESS（7ステップ） -->
   <div class="sec" style="background:var(--blush)">
     <div class="eyebrow">Steps</div>
     <div class="h2" style="font-size:clamp(30px,3.5vw,46px)">APPLICATION<br>PROCESS</div>
     <p class="sub-jp" style="margin-bottom:36px">出願から入学までのステップ</p>
-    <div class="steps-row">
-      <div class="step"><div class="step-n">01</div><div class="step-t">資料請求・無料相談</div><p class="step-d">まずは資料をお取り寄せいただくか、メール・電話・LINEでお気軽にご相談ください。</p><div class="step-arr">›</div></div>
-      <div class="step"><div class="step-n">02</div><div class="step-t">出願書類の準備</div><p class="step-d">必要書類をご準備いただきます。書類の準備についてもスタッフがサポートします。</p><div class="step-arr">›</div></div>
-      <div class="step"><div class="step-n">03</div><div class="step-t">在留資格申請</div><p class="step-d">JSLが入管への在留資格認定証明書の申請手続きをサポートします。</p><div class="step-arr">›</div></div>
-      <div class="step"><div class="step-n">04</div><div class="step-t">入学・授業開始</div><p class="step-d">来日後、オリエンテーションを経て授業がスタート。生活サポートも充実。</p></div>
+    <div class="steps-row" style="grid-template-columns:repeat(7,1fr)">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-t">問い合わせ・資料請求</div>
+        <p class="step-d">メール・電話・LINEでお気軽にご相談ください。資料請求も無料です。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-t">入学願書・書類の準備と提出</div>
+        <p class="step-d">入学願書と必要書類をご準備いただきます。スタッフが丁寧にサポートします。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-t">JSLがCOE申請（約2ヶ月）</div>
+        <p class="step-d">JSLが入管へCOE（在留資格認定証明書）の申請手続きを行います。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-t">学費の振込</div>
+        <p class="step-d">COE発行通知後、所定の期日までに学費をお振込みいただきます。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-t">COE・入学許可証の郵送</div>
+        <p class="step-d">JSLよりCOEおよび入学許可証を郵送します。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">06</div>
+        <div class="step-t">学生ビザ申請</div>
+        <p class="step-d">お近くの日本大使館・領事館にて学生ビザ（留学ビザ）を申請してください。</p>
+        <div class="step-arr">›</div>
+      </div>
+      <div class="step">
+        <div class="step-n">07</div>
+        <div class="step-t">来日・入学・オリエンテーション</div>
+        <p class="step-d">来日後、オリエンテーションを経て授業がスタート。生活サポートも充実しています。</p>
+      </div>
     </div>
   </div>
 
+  <!-- 2. コース比較表（実データ） -->
   <div class="sec">
     <div class="eyebrow">Tuition</div>
-    <div class="h2" style="font-size:clamp(28px,3vw,42px)">FEES</div>
-    <p class="sub-jp">学費・費用の目安 — 詳細はコース・修業期間によって異なります。お気軽にお問い合わせください。</p>
+    <div class="h2">FEES</div>
+    <p class="sub-jp" style="margin-bottom:28px">コース別学費の目安 — 詳細はお気軽にお問い合わせください。</p>
     <table class="fee-tbl">
-      <tbody><tr><th>コース</th><th>期間</th><th>入学金</th><th>授業料（目安）</th></tr>
-      <tr><td>進学コース</td><td>入学時期による</td><td>お問い合わせください</td><td>お問い合わせください</td></tr>
-      <tr><td>一般コース</td><td>1年間</td><td>お問い合わせください</td><td>お問い合わせください</td></tr>
-      <tr><td>短期コース</td><td>2週間〜</td><td>お問い合わせください</td><td>お問い合わせください</td></tr>
-    </tbody></table>
-    <p style="font-size:12px;color:var(--muted);margin-top:12px;font-family:var(--f-j)">※ JSL MeTHODは全学生が無料で利用できます。</p>
+      <thead>
+        <tr>
+          <th>コース</th>
+          <th>期間</th>
+          <th>学費合計（税込）</th>
+          <th>MeTHOD込み納入金</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Long Term</strong><br><span style="font-size:12px;color:var(--muted)">進学・一般コース</span></td>
+          <td>6ヶ月〜2年</td>
+          <td><span class="price-main" style="font-size:16px">792,000円〜858,000円</span></td>
+          <td><span class="price-main" style="font-size:16px">834,000円〜942,000円</span></td>
+        </tr>
+        <tr>
+          <td><strong>Short Term</strong></td>
+          <td>2週間〜6ヶ月</td>
+          <td><span style="color:var(--muted)">お問い合わせください</span></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Working Holiday</strong></td>
+          <td>2週間〜1年</td>
+          <td><span style="color:var(--muted)">お問い合わせください</span></td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px">※ JSL MeTHODは全学生が無料で利用できます。</p>
   </div>
 
-  <div style="margin-top:48px">
-        <div class="eyebrow">学費・納入金</div>
-        <div class="h2" style="font-size:30px">TUITION FEES</div>
-        <p class="sub-jp" style="margin-top:6px;margin-bottom:0">東京校 — 入学金・授業料・教材費・消費税込み</p>
-        <div class="cd-fee-wrap">
-          <table class="cd-fee-tbl">
-            <thead>
-              <tr>
-                <th>入学時期</th><th>課程</th>
-                <th>学費合計（税込）</th>
-                <th>MeTHOD使用料込み納入金</th>
-                <th>出願締切</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="badge badge-red">4月入学</span></td>
-                <td>2年課程</td>
-                <td><div class="price-main">858,000円</div><div class="price-sub">入学金・授業料・教材費・消費税込み</div></td>
-                <td><div class="price-main">942,000円</div><div class="price-sub">MeTHOD使用料 84,000円含む</div></td>
-                <td style="font-family:var(--f-j);font-size:13px">10月中旬</td>
-              </tr>
-              <tr>
-                <td><span class="badge">10月入学</span></td>
-                <td>1.5年課程</td>
-                <td><div class="price-main">858,000円</div><div class="price-sub">入学金・授業料・教材費・消費税込み</div></td>
-                <td><div class="price-main">921,000円</div><div class="price-sub">MeTHOD使用料含む</div></td>
-                <td style="font-family:var(--f-j);font-size:13px">4月中旬</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:10px;font-family:var(--f-j)">※ 上記は東京校の金額です。詳細・最新情報はお問い合わせください。</p>
-      </div><div style="margin-top:48px">
-        <div class="eyebrow">入学時期カレンダー</div>
-        <div class="h2" style="font-size:30px">INTAKE CALENDAR</div>
-        <p class="sub-jp" style="margin-top:6px;margin-bottom:20px">出願締切と授業開始月の目安（東京校）</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div style="background:white;border-radius:6px;padding:18px 22px;border-top:4px solid var(--red);box-shadow:0 2px 8px rgba(0,0,0,.05)">
-            <div style="font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px">4月入学 / 2年課程</div>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-              <span style="font-size:18px">📅</span>
-              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">出願締切：<strong>10月中旬</strong></span>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px">
-              <span style="font-size:18px">🏫</span>
-              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">授業開始：<strong>翌年4月</strong></span>
-            </div>
-          </div>
-          <div style="background:white;border-radius:6px;padding:18px 22px;border-top:4px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.05)">
-            <div style="font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">10月入学 / 1.5年課程</div>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-              <span style="font-size:18px">📅</span>
-              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">出願締切：<strong>4月中旬</strong></span>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px">
-              <span style="font-size:18px">🏫</span>
-              <span style="font-family:var(--f-j);font-size:14px;color:var(--ink)">授業開始：<strong>同年10月</strong></span>
-            </div>
-          </div>
-        </div>
-      </div><div style="margin-top:48px">
-        <div class="eyebrow">学費・納入金</div>
-        <div class="h2" style="font-size:30px">TUITION FEES</div>
-        <p class="sub-jp" style="margin-top:6px;margin-bottom:0">東京校・沖縄校の比較</p>
-        <div class="cd-fee-wrap">
-          <table class="cd-fee-tbl">
-            <thead>
-              <tr>
-                <th>キャンパス</th><th>入学時期</th><th>期間</th>
-                <th>学費合計（税込）</th>
-                <th>MeTHOD使用料込み納入金</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>🗼 東京校</strong></td>
-                <td><span class="badge badge-red">4月</span><span class="badge">10月</span></td>
-                <td>1年課程</td>
-                <td><div class="price-main">858,000円</div></td>
-                <td><div class="price-main">900,000円</div></td>
-              </tr>
-              <tr>
-                <td><strong>🌺 沖縄校</strong></td>
-                <td><span class="badge badge-red">4月</span><span class="badge">7月</span><span class="badge">10月</span><span class="badge">1月</span></td>
-                <td>9〜15ヶ月</td>
-                <td><div class="price-main">792,000円</div></td>
-                <td><div class="price-main">834,000円</div><div class="price-sub">〜865,500円（期間による）</div></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:10px;font-family:var(--f-j)">※ 入学金・授業料・教材費・消費税込み。沖縄校は期間により納入金が異なります。</p>
-      </div><div style="margin-top:48px">
-        <div class="eyebrow">入学時期カレンダー</div>
-        <div class="h2" style="font-size:30px">INTAKE CALENDAR</div>
-        <p class="sub-jp" style="margin-top:6px;margin-bottom:20px">授業開始月の目安</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-          <div>
-            <div style="font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ink);margin-bottom:12px;text-transform:uppercase">🗼 東京校</div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap">
-              <div style="background:var(--red);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">4月</div><div style="font-size:11px;opacity:.8">1年課程</div></div>
-              <div style="background:var(--gold);color:var(--navy);border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">10月</div><div style="font-size:11px;opacity:.8">1年課程</div></div>
-            </div>
-          </div>
-          <div>
-            <div style="font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ink);margin-bottom:12px;text-transform:uppercase">🌺 沖縄校</div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap">
-              <div style="background:var(--navy);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">4月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
-              <div style="background:var(--navy2);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">7月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
-              <div style="background:var(--navy);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">10月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
-              <div style="background:var(--navy2);color:white;border-radius:6px;padding:10px 18px;text-align:center"><div style="font-family:var(--f-c);font-size:17px;font-weight:700">1月</div><div style="font-size:11px;opacity:.7">9〜15ヶ月</div></div>
-            </div>
-          </div>
-        </div>
-      </div><div style="padding:56px 60px;background:var(--blush)">
-    <div class="eyebrow">入学に必要な書類</div>
-    <div class="h2" style="font-size:30px">REQUIRED DOCUMENTS</div>
-    <p class="sub-jp" style="margin-top:8px;margin-bottom:0">進学・一般コースの出願に必要な書類（短期コースは別途ご案内）</p>
-    <div class="docs-grid">
-      <div class="doc-item"><div class="doc-ico">📋</div><div class="doc-txt">入学願書</div></div>
-      <div class="doc-item"><div class="doc-ico">✍️</div><div class="doc-txt">就学理由書</div></div>
-      <div class="doc-item"><div class="doc-ico">💰</div><div class="doc-txt">経費支弁書</div></div>
-      <div class="doc-item"><div class="doc-ico">🎓</div><div class="doc-txt">卒業証書（原本またはコピー）</div></div>
-      <div class="doc-item"><div class="doc-ico">🛂</div><div class="doc-txt">パスポートコピー</div></div>
-      <div class="doc-item"><div class="doc-ico">📷</div><div class="doc-txt">顔写真 5枚</div></div>
-      <div class="doc-item"><div class="doc-ico">📚</div><div class="doc-txt">日本語学習証明書（150時間以上）</div></div>
-      <div class="doc-item"><div class="doc-ico">📄</div><div class="doc-txt">その他、在留資格申請に必要な書類</div></div>
-      <div class="doc-item" style="border-left-color:var(--red)"><div class="doc-ico">❓</div><div class="doc-txt">詳細はお問い合わせください</div></div>
+  <!-- 3. 学費テーブル：沖縄校（本校） -->
+  <div class="sec" style="background:var(--blush)">
+    <div class="eyebrow">学費・納入金</div>
+    <div class="h2">TUITION FEES</div>
+    <p class="sub-jp">🌺 沖縄校（本校・1986年創立） — 入学金・授業料・教材費・消費税込み</p>
+    <div class="cd-fee-wrap">
+      <table class="cd-fee-tbl">
+        <thead>
+          <tr>
+            <th>入学</th><th>期間</th>
+            <th>学費合計（税込）</th>
+            <th>MeTHOD使用料込み納入金</th>
+            <th>出願締切</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-red">4月</span></td>
+            <td>1年（12ヶ月）</td>
+            <td><div class="price-main">792,000円</div></td>
+            <td><div class="price-main">834,000円</div><div class="price-sub">MeTHOD使用料 42,000円含む</div></td>
+            <td>11月末</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">7月</span></td>
+            <td>9ヶ月</td>
+            <td><div class="price-main">792,000円</div></td>
+            <td><div class="price-main">865,500円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+            <td>2月末</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">10月</span></td>
+            <td>6ヶ月</td>
+            <td><div class="price-main">792,000円</div></td>
+            <td><div class="price-main">855,000円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+            <td>5月末</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">1月</span></td>
+            <td>3ヶ月</td>
+            <td><div class="price-main">792,000円</div></td>
+            <td><div class="price-main">844,500円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+            <td>8月末</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:16px;font-family:var(--f-j)">※ 必要書類は入学時期・国籍・在留資格によって異なる場合があります。スタッフが丁寧にサポートしますので、まずはご相談ください。</p>
-  </div><div class="sec" style="background:var(--blush)">
+    <p style="font-size:12px;color:var(--muted);margin-top:16px">学費内訳：選考料20,000円 + 入学金100,000円 + 授業料540,000円 + 教材費60,000円 + 消費税72,000円</p>
+  </div>
+
+  <!-- 学費テーブル：東京校 -->
+  <div class="sec">
+    <div class="eyebrow">学費・納入金</div>
+    <div class="h2">TUITION FEES</div>
+    <p class="sub-jp">🗼 東京校（2018年開設） — 入学金・授業料・教材費・消費税込み</p>
+    <div class="cd-fee-wrap">
+      <table class="cd-fee-tbl">
+        <thead>
+          <tr>
+            <th>入学</th><th>課程</th>
+            <th>学費合計（税込）</th>
+            <th>MeTHOD使用料込み納入金</th>
+            <th>出願締切</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-red">4月</span></td>
+            <td>2年課程</td>
+            <td><div class="price-main">858,000円</div></td>
+            <td><div class="price-main">942,000円</div><div class="price-sub">MeTHOD使用料 84,000円含む</div></td>
+            <td>10月中旬</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">10月</span></td>
+            <td>1.5年課程</td>
+            <td><div class="price-main">858,000円</div></td>
+            <td><div class="price-main">921,000円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+            <td>4月中旬</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">4月・10月</span></td>
+            <td>1年課程（一般）</td>
+            <td><div class="price-main">858,000円</div></td>
+            <td><div class="price-main">900,000円</div><div class="price-sub">MeTHOD使用料含む</div></td>
+            <td>前期5月10日 / 後期10月末</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px">学費内訳：選考料20,000円 + 入学金100,000円 + 授業料600,000円 + 教材費60,000円 + 消費税78,000円</p>
+  </div>
+
+  <!-- 4. 入学カレンダー：沖縄→東京の順 -->
+  <div class="sec" style="background:var(--blush)">
+    <div class="eyebrow">入学時期カレンダー</div>
+    <div class="h2">INTAKE CALENDAR</div>
+    <p class="sub-jp" style="margin-bottom:32px">授業開始月と出願締切の目安</p>
+    <div class="two-col" style="align-items:start">
+      <div>
+        <div style="font-family:var(--f-c);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--navy);margin-bottom:16px;text-transform:uppercase">🌺 沖縄校（本校）</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--red)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--red)">4月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">期間：1年（12ヶ月）</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：11月末</div>
+          </div>
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--red)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--red)">7月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">期間：9ヶ月</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：2月末</div>
+          </div>
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--red)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--red)">10月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">期間：6ヶ月</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：5月末</div>
+          </div>
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--red)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--red)">1月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">期間：3ヶ月</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：8月末</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--f-c);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--navy);margin-bottom:16px;text-transform:uppercase">🗼 東京校</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--navy)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--navy)">4月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">2年課程</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：10月中旬</div>
+          </div>
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--navy)">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--navy)">10月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">1.5年課程</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 出願締切：4月中旬</div>
+          </div>
+          <div style="background:white;border-radius:4px;padding:18px 20px;border-top:3px solid var(--navy);grid-column:span 2">
+            <div style="font-family:var(--f-c);font-size:18px;font-weight:700;color:var(--navy)">4月・10月</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">1年課程（一般）</div>
+            <div style="font-size:12px;color:var(--ink);margin-top:4px">📅 前期：5月10日 / 後期：10月末</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. 寮・サポートセクション（沖縄→東京） -->
+  <div class="sec">
+    <div class="eyebrow">Housing &amp; Support</div>
+    <div class="h2">寮・サポート</div>
+    <p class="sub-jp" style="margin-bottom:36px">安心して学べる環境を、入学前からサポートします。</p>
+    <div class="two-col" style="align-items:start">
+      <div>
+        <div style="font-family:var(--f-c);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--navy);margin-bottom:16px;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:8px">🌺 沖縄校（本校） — 学校直営寮（徒歩1分）</div>
+        <div class="dorm-cards">
+          <div class="dorm-card">
+            <div class="dorm-type">🛏 1人部屋</div>
+            <div><span class="dorm-price">65,000</span><span class="dorm-unit">円 / 月</span></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">水道光熱費込み</div>
+          </div>
+          <div class="dorm-card">
+            <div class="dorm-type">🛏🛏 2人部屋</div>
+            <div><span class="dorm-price">45,000</span><span class="dorm-unit">円 / 月</span></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">ルームメイトと交流しながら</div>
+          </div>
+          <div class="dorm-card" style="grid-column:span 2">
+            <div class="dorm-type">🛏🛏🛏 8人部屋</div>
+            <div><span class="dorm-price">30,000</span><span class="dorm-unit">円 / 月</span></div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">コストを抑えて学習に集中</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px">※ 寮の空き状況はお問い合わせ時にご確認ください。</p>
+      </div>
+      <div>
+        <div style="font-family:var(--f-c);font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--navy);margin-bottom:16px;text-transform:uppercase;border-bottom:2px solid var(--navy);padding-bottom:8px">🗼 東京校 — 提携アパート・シェアハウス紹介</div>
+        <div style="background:var(--blush);border-radius:4px;padding:20px 24px;border-left:4px solid var(--navy)">
+          <p style="font-size:13px;color:var(--muted);line-height:1.8;font-family:var(--f-j)">学校から10〜30分圏内の提携アパート・シェアハウスをご紹介しています。入学前から住まい探しをサポートします。</p>
+        </div>
+        <div style="margin-top:28px">
+          <div style="font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--navy);margin-bottom:12px;text-transform:uppercase">両校共通サポート</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div class="doc-item"><span class="doc-ico">✈️</span><span class="doc-txt">空港送迎</span></div>
+            <div class="doc-item"><span class="doc-ico">📋</span><span class="doc-txt">ビザ・書類手続きサポート</span></div>
+            <div class="doc-item"><span class="doc-ico">💼</span><span class="doc-txt">アルバイト紹介（週28時間まで）</span></div>
+            <div class="doc-item"><span class="doc-ico">🎓</span><span class="doc-txt">進学・就職サポート</span></div>
+            <div class="doc-item" style="grid-column:span 2"><span class="doc-ico">🌍</span><span class="doc-txt">多言語対応（英語・スペイン語・中国語・ネパール語・ベトナム語）</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. REQUIRED DOCUMENTS -->
+  <div class="sec" style="background:var(--blush)">
+    <div class="eyebrow">入学に必要な書類</div>
+    <div class="h2">REQUIRED DOCUMENTS</div>
+    <p class="sub-jp" style="margin-bottom:28px">進学・一般コースの出願に必要な書類（短期コースは別途ご案内）</p>
+    <div class="docs-grid">
+      <div class="doc-item"><span class="doc-ico">📋</span><span class="doc-txt">入学願書</span></div>
+      <div class="doc-item"><span class="doc-ico">✍️</span><span class="doc-txt">就学理由書</span></div>
+      <div class="doc-item"><span class="doc-ico">💰</span><span class="doc-txt">経費支弁書</span></div>
+      <div class="doc-item"><span class="doc-ico">🎓</span><span class="doc-txt">卒業証書（原本またはコピー）</span></div>
+      <div class="doc-item"><span class="doc-ico">🛂</span><span class="doc-txt">パスポートコピー</span></div>
+      <div class="doc-item"><span class="doc-ico">📷</span><span class="doc-txt">顔写真 5枚</span></div>
+      <div class="doc-item"><span class="doc-ico">📚</span><span class="doc-txt">日本語学習証明書（150時間以上）</span></div>
+      <div class="doc-item"><span class="doc-ico">📄</span><span class="doc-txt">その他、在留資格申請に必要な書類</span></div>
+      <div class="doc-item"><span class="doc-ico">❓</span><span class="doc-txt">詳細はお問い合わせください</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:20px">※ 必要書類は入学時期・国籍・在留資格によって異なる場合があります。スタッフが丁寧にサポートしますので、まずはご相談ください。</p>
+  </div>
+
+  <!-- 7. FAQ -->
+  <div class="sec" style="background:var(--blush)">
     <div class="eyebrow">FAQ</div>
     <div class="h2" style="font-size:clamp(28px,3vw,42px)">FREQUENTLY<br>ASKED</div>
     <p class="sub-jp" style="margin-bottom:6px">よくあるご質問</p>
     <div class="faq-list">
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>日本語がまったく話せなくても入学できますか？</span><span class="faq-icon">＋</span></div><div class="faq-a"><p>はい、入学できます。初級クラスからご用意していますので、日本語がまったく初めての方でも安心してお越しください。入学前にレベルチェックテストを実施し、適切なクラスにご案内します。</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>ビザの申請はどうすればいいですか？</span><span class="faq-icon">＋</span></div><div class="faq-a"><p>JSLでは在留資格認定証明書の申請手続きをサポートしています。必要な書類の準備から申請まで、スタッフが丁寧にご案内しますのでご安心ください。</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>沖縄校と東京校はどちらがおすすめですか？</span><span class="faq-icon">＋</span></div><div class="faq-a"><p>目標によって異なります。進学・就職を目指す方には東京校が、ゆったりとした環境で学びたい方やグループ専門学校への進学を考えている方には沖縄校がおすすめです。</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>ワーキングホリデービザで入学できますか？</span><span class="faq-icon">＋</span></div><div class="faq-a"><p>もちろんです。短期コースではワーキングホリデービザをお持ちの方を歓迎しています。ビザ有効期間中はずっと受講できます。</p></div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>JSL MeTHODはどんなアプリですか？</span><span class="faq-icon">＋</span></div><div class="faq-a"><p>JSLが独自開発したEラーニングアプリです。授業と連動したコンテンツで予習・復習ができます。スマートフォン・タブレット・PCに対応しており、全コースの学生が追加費用なしで利用できます。</p></div></div>
+      <div class="faq-item"><div class="faq-q"><span>日本語がまったく話せなくても入学できますか？</span><span class="faq-plus">＋</span></div><div class="faq-a">はい、入学できます。初級クラスからご用意していますので、日本語がまったく初めての方でも安心してお越しください。入学前にレベルチェックテストを実施し、適切なクラスにご案内します。</div></div>
+      <div class="faq-item"><div class="faq-q"><span>ビザの申請はどうすればいいですか？</span><span class="faq-plus">＋</span></div><div class="faq-a">JSLでは在留資格認定証明書の申請手続きをサポートしています。必要な書類の準備から申請まで、スタッフが丁寧にご案内しますのでご安心ください。</div></div>
+      <div class="faq-item"><div class="faq-q"><span>沖縄校と東京校はどちらがおすすめですか？</span><span class="faq-plus">＋</span></div><div class="faq-a">目標によって異なります。進学・就職を目指す方には東京校が、ゆったりとした環境で学びたい方やグループ専門学校への進学を考えている方には沖縄校がおすすめです。</div></div>
+      <div class="faq-item"><div class="faq-q"><span>ワーキングホリデービザで入学できますか？</span><span class="faq-plus">＋</span></div><div class="faq-a">もちろんです。短期コースではワーキングホリデービザをお持ちの方を歓迎しています。ビザ有効期間中はずっと受講できます。</div></div>
+      <div class="faq-item"><div class="faq-q"><span>JSL MeTHODはどんなアプリですか？</span><span class="faq-plus">＋</span></div><div class="faq-a">JSLが独自開発したEラーニングアプリです。授業と連動したコンテンツで予習・復習ができます。スマートフォン・タブレット・PCに対応しており、全コースの学生が追加費用なしで利用できます。</div></div>
     </div>
   </div>
 
-  <div class="home-cta">
+  <!-- 8. CTA（新規追加） -->
+  <div class="cd-cta-bar" style="margin:0;border-radius:0">
     <div>
-      <div class="hc-ey">無料でご相談ください</div>
-      <div class="hc-h">まずは、<em>お気軽に。</em></div>
-      <p class="hc-sub">入学前のご質問・資料請求はいつでも受け付けています。</p>
+      <div class="cd-cta-lead">まずは<em>無料相談</em>から</div>
+      <div class="cd-cta-sub">入学時期・学費・ビザについてお気軽にお問い合わせください</div>
+      <div class="cd-cta-contact">
+        <strong>🌺 沖縄校（本校）</strong>&nbsp;&nbsp;📞 098-875-1456&nbsp;&nbsp;|&nbsp;&nbsp;✉️ jslokinawa@jslnippon.jp<br>
+        <strong>🗼 東京校</strong>&nbsp;&nbsp;📞 03-5823-4245&nbsp;&nbsp;|&nbsp;&nbsp;✉️ jsltokyo@jslnippon.jp
+      </div>
     </div>
-    <div class="hc-r">
-      <button class="pill pill-white" style="font-size:14px">相談フォームへ<span class="arr">→</span></button>
-      <button class="pill" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.28)">資料請求（無料）<span class="arr">→</span></button>
+    <div class="cd-cta-btns">
+      <a href="mailto:jslokinawa@jslnippon.jp" class="pill pill-gold">沖縄校に相談する<span class="arr">→</span></a>
+      <a href="mailto:jsltokyo@jslnippon.jp" class="pill pill-white">東京校に相談する<span class="arr">→</span></a>
     </div>
   </div>
+
 </div>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1390,6 +1544,7 @@ window.addEventListener('load',()=>{
   if(h){const[pid,sub]=h.split('-');if(pages.includes(pid))go(pid,sub)}
 });
 </script>
+
 
 
 
