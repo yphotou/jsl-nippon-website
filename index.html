@@ -550,6 +550,17 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 .doc-item{background:white;border-radius:4px;padding:14px 16px;border-left:3px solid var(--gold);box-shadow:0 1px 4px rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:10px}
 .doc-ico{font-size:16px;flex-shrink:0;margin-top:1px}
 .doc-txt{font-size:13px;color:var(--ink);font-family:var(--f-j);line-height:1.5}
+
+/* ── APPLICATION PROCESS ステップ縦リスト ── */
+.steps-row{gap:0}
+.step{padding:20px 28px;border-bottom:1px solid var(--blush3)}
+.step:last-child{border-bottom:none}
+.step-inner{display:grid;grid-template-columns:52px 1fr;align-items:start;gap:0 16px}
+.step-n{font-size:36px;margin-bottom:0;line-height:1.1}
+.step-right{}
+.step-t{margin-bottom:4px}
+.step-d{margin-bottom:0}
+.step-arr{position:static;transform:none;width:auto;height:auto;border:none;border-radius:0;background:transparent;font-size:16px;color:var(--red);font-weight:700;text-align:center;padding:4px 0 0 68px;display:block;line-height:1}
 </style>
 
 </head>
@@ -1039,46 +1050,84 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
     <p class="sub-jp" style="margin-bottom:36px">出願から入学までのステップ</p>
     <div class="steps-row" style="grid-template-columns:1fr">
       <div class="step">
-        <div class="step-n">01</div>
+    <div class="step-inner">
+      <div class="step-n">01</div>
+      <div class="step-right">
         <div class="step-t">問い合わせ・資料請求</div>
         <p class="step-d">メール・電話・LINEでお気軽にご相談ください。資料請求も無料です。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
       </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">02</div>
+    <div class="step-inner">
+      <div class="step-n">02</div>
+      <div class="step-right">
         <div class="step-t">入学願書・書類の準備と提出</div>
         <p class="step-d">入学願書と必要書類をご準備いただきます。スタッフが丁寧にサポートします。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
       </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">03</div>
+    <div class="step-inner">
+      <div class="step-n">03</div>
+      <div class="step-right">
         <div class="step-t">JSLがCOE申請（約2ヶ月）</div>
         <p class="step-d">JSLが入管へCOE（在留資格認定証明書）の申請手続きを行います。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
-      </div><div class="step"><div class="step-n">04</div><div class="step-t">COE交付（出入国在留管理庁）</div><p class="step-d">出入国在留管理庁より在留資格認定証明書が交付されます。JSLが受け取ります。</p><div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div></div>
+      </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div><div class="step">
+    <div class="step-inner">
+      <div class="step-n">04</div>
+      <div class="step-right">
+        <div class="step-t">COE交付（出入国在留管理庁）</div>
+        <p class="step-d">出入国在留管理庁より在留資格認定証明書が交付されます。JSLが受け取ります。</p>
+      </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">05</div>
+    <div class="step-inner">
+      <div class="step-n">05</div>
+      <div class="step-right">
         <div class="step-t">学費の振込</div>
         <p class="step-d">COE発行通知後、所定の期日までに学費をお振込みいただきます。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
       </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">06</div>
+    <div class="step-inner">
+      <div class="step-n">06</div>
+      <div class="step-right">
         <div class="step-t">COE・入学許可証の郵送</div>
         <p class="step-d">JSLよりCOEおよび入学許可証を郵送します。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
       </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">07</div>
+    <div class="step-inner">
+      <div class="step-n">07</div>
+      <div class="step-right">
         <div class="step-t">学生ビザ申請</div>
         <p class="step-d">お近くの日本大使館・領事館にて学生ビザ（留学ビザ）を申請してください。</p>
-        <div class="step-arr" style="position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--red);z-index:2;font-weight:700;">↓</div>
       </div>
+    </div>
+    <div class="step-arr">↓</div>
+  </div>
       <div class="step">
-        <div class="step-n">08</div>
+    <div class="step-inner">
+      <div class="step-n">08</div>
+      <div class="step-right">
         <div class="step-t">来日・入学・オリエンテーション</div>
         <p class="step-d">来日後、オリエンテーションを経て授業がスタート。生活サポートも充実しています。</p>
       </div>
+    </div>
+    
+  </div>
     </div>
   </div>
 
@@ -1544,6 +1593,7 @@ window.addEventListener('load',()=>{
   if(h){const[pid,sub]=h.split('-');if(pages.includes(pid))go(pid,sub)}
 });
 </script>
+
 
 
 
