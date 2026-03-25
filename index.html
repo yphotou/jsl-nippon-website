@@ -515,6 +515,25 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 .hero-ja{animation:fU .55s ease .2s both}
 .hero-ctas{animation:fU .55s ease .3s both}
 .hero-stats{animation:fU .55s ease .4s both}
+
+/* ── LEVEL GUIDE TABLE ── */
+.lg-wrap{margin-top:48px}
+.lg-sub{font-size:13px;color:var(--muted);margin-top:8px;margin-bottom:28px;line-height:1.7}
+.lg-table{width:100%;border-collapse:collapse;font-size:13px;background:white;border-radius:6px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.lg-table th{background:var(--navy);color:white;font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:12px 16px;text-align:left}
+.lg-table td{padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.06);vertical-align:middle;color:var(--ink);line-height:1.65}
+.lg-table tr:last-child td{border-bottom:none}
+.lg-table tr:hover td{background:var(--blush)}
+.lg-badge{display:inline-block;font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:4px;white-space:nowrap}
+.lg-badge-basic{background:rgba(184,145,42,.15);color:#7a5f14}
+.lg-badge-inter{background:rgba(22,43,82,.12);color:var(--navy)}
+.lg-badge-adv{background:rgba(192,8,21,.12);color:var(--red)}
+.lg-jlpt{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap}
+.lg-jlpt-pill{display:inline-block;background:var(--navy);color:white;font-family:var(--f-c);font-size:11px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:99px}
+.lg-jlpt-pill.gold{background:var(--gold);color:#fff}
+.lg-jlpt-pill.red{background:var(--red);color:#fff}
+.lg-jlpt-sep{color:var(--muted);font-size:12px}
+.lg-note{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.8}
 </style>
 
 <style id="courses-extra-styles">
@@ -721,6 +740,56 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
       
 
       <!-- 授業時間 -->
+            <div class="lg-wrap">
+        <div class="eyebrow">LANGUAGE LEVEL</div>
+        <div class="h2" style="font-size:30px">LEVEL GUIDE</div>
+        <p class="lg-sub">入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。</p>
+        <table class="lg-table">
+          <thead>
+            <tr>
+              <th>レベル</th>
+              <th>CEFR</th>
+              <th>JLPT目安</th>
+              <th>到達の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td>A1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
+              <td>ひらがな・カタカナ・基本表現を理解し、簡単な挨拶や自己紹介ができる</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N4</span></span></td>
+              <td>日常的な話題について簡単な文章を読み書きし、ゆっくりであれば会話できる</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td>B1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
+              <td>日常生活や仕事に関する話題を理解し、ある程度まとまった内容を話したり書いたりできる</td>
+            </tr>
+            <tr>
+              <td>B2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
+              <td>自然なスピードの会話や複雑な文章を理解し、幅広い話題で自分の意見を表現できる</td>
+            </tr>
+            <tr>
+              <td><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
+              <td>C1/C2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
+              <td>社会的・学術的な場面で流暢に日本語を使いこなし、微妙なニュアンスも表現できる</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="lg-note">
+          ※ 入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。<br>
+          ※ CEFRとJLPTの対応は目安であり、完全には一致しません。
+        </div>
+      </div>
+
       <div style="margin-top:48px">
         <div class="eyebrow">授業時間</div>
         <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
@@ -811,6 +880,56 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
       
 
       <!-- 授業時間 -->
+            <div class="lg-wrap">
+        <div class="eyebrow">LANGUAGE LEVEL</div>
+        <div class="h2" style="font-size:30px">LEVEL GUIDE</div>
+        <p class="lg-sub">入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。</p>
+        <table class="lg-table">
+          <thead>
+            <tr>
+              <th>レベル</th>
+              <th>CEFR</th>
+              <th>JLPT目安</th>
+              <th>到達の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td>A1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
+              <td>ひらがな・カタカナ・基本表現を理解し、簡単な挨拶や自己紹介ができる</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N4</span></span></td>
+              <td>日常的な話題について簡単な文章を読み書きし、ゆっくりであれば会話できる</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td>B1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
+              <td>日常生活や仕事に関する話題を理解し、ある程度まとまった内容を話したり書いたりできる</td>
+            </tr>
+            <tr>
+              <td>B2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
+              <td>自然なスピードの会話や複雑な文章を理解し、幅広い話題で自分の意見を表現できる</td>
+            </tr>
+            <tr>
+              <td><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
+              <td>C1/C2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
+              <td>社会的・学術的な場面で流暢に日本語を使いこなし、微妙なニュアンスも表現できる</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="lg-note">
+          ※ 入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。<br>
+          ※ CEFRとJLPTの対応は目安であり、完全には一致しません。
+        </div>
+      </div>
+
       <div style="margin-top:48px">
         <div class="eyebrow">授業時間</div>
         <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
@@ -876,6 +995,56 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
       </div>
 
       <!-- 授業時間 -->
+            <div class="lg-wrap">
+        <div class="eyebrow">LANGUAGE LEVEL</div>
+        <div class="h2" style="font-size:30px">LEVEL GUIDE</div>
+        <p class="lg-sub">入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。</p>
+        <table class="lg-table">
+          <thead>
+            <tr>
+              <th>レベル</th>
+              <th>CEFR</th>
+              <th>JLPT目安</th>
+              <th>到達の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td>A1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
+              <td>ひらがな・カタカナ・基本表現を理解し、簡単な挨拶や自己紹介ができる</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N4</span></span></td>
+              <td>日常的な話題について簡単な文章を読み書きし、ゆっくりであれば会話できる</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td>B1</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
+              <td>日常生活や仕事に関する話題を理解し、ある程度まとまった内容を話したり書いたりできる</td>
+            </tr>
+            <tr>
+              <td>B2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
+              <td>自然なスピードの会話や複雑な文章を理解し、幅広い話題で自分の意見を表現できる</td>
+            </tr>
+            <tr>
+              <td><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
+              <td>C1/C2</td>
+              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
+              <td>社会的・学術的な場面で流暢に日本語を使いこなし、微妙なニュアンスも表現できる</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="lg-note">
+          ※ 入学時にプレースメントテストを実施し、レベル別クラスに振り分けます。<br>
+          ※ CEFRとJLPTの対応は目安であり、完全には一致しません。
+        </div>
+      </div>
+
       <div style="margin-top:48px">
         <div class="eyebrow">授業時間</div>
         <div class="h2" style="font-size:30px">CLASS SCHEDULE</div>
