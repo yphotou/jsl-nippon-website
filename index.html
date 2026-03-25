@@ -520,24 +520,30 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 .lg-wrap{margin-top:48px}
 .lg-sub{font-size:14px;color:var(--muted);margin-top:8px;margin-bottom:28px;line-height:1.7}
 .lg-table{width:100%;border-collapse:collapse;background:white;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);table-layout:fixed}
-.lg-table colgroup col:nth-child(1){width:16%}
+.lg-table colgroup col:nth-child(1){width:17%}
 .lg-table colgroup col:nth-child(2){width:7%}
-.lg-table colgroup col:nth-child(3){width:14%}
-.lg-table colgroup col:nth-child(4){width:63%}
-.lg-table th{background:var(--navy);color:white;font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:13px 16px;text-align:left}
-.lg-table td{padding:14px 16px;border-bottom:1px solid rgba(0,0,0,.06);vertical-align:middle;color:var(--ink);line-height:1.7;font-size:14px}
+.lg-table colgroup col:nth-child(3){width:18%}
+.lg-table colgroup col:nth-child(4){width:58%}
+.lg-table th{background:var(--navy);color:white;font-family:var(--f-c);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:13px 16px;text-align:left;white-space:nowrap}
+.lg-table td{padding:14px 16px;border-bottom:1px solid rgba(0,0,0,.08);vertical-align:middle;color:var(--ink);line-height:1.7;font-size:14px;border-right:1px solid rgba(0,0,0,.06)}
+.lg-table td:last-child{border-right:none}
 .lg-table tr:last-child td{border-bottom:none}
 .lg-badge{display:inline-block;font-family:var(--f-c);font-size:11.5px;font-weight:700;letter-spacing:.05em;padding:5px 11px;border-radius:4px;white-space:nowrap}
 .lg-badge-basic{background:rgba(184,145,42,.15);color:#7a5f14}
 .lg-badge-inter{background:rgba(22,43,82,.12);color:var(--navy)}
 .lg-badge-adv{background:rgba(192,8,21,.12);color:var(--red)}
-.lg-cefr{font-size:14px;font-weight:600;color:var(--ink)}
+.lg-cefr{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
 .lg-jlpt{display:inline-flex;align-items:center;gap:5px;flex-wrap:nowrap;white-space:nowrap}
-.lg-jlpt-pill{display:inline-block;background:var(--navy);color:white;font-family:var(--f-c);font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:99px}
+.lg-jlpt-pill{display:inline-block;background:var(--navy);color:white;font-family:var(--f-c);font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:4px 10px;border-radius:99px;white-space:nowrap}
 .lg-jlpt-pill.gold{background:var(--gold);color:#fff}
 .lg-jlpt-pill.red{background:var(--red);color:#fff}
-.lg-jlpt-sep{color:var(--muted);font-size:13px}
+.lg-jlpt-sep{color:var(--muted);font-size:13px;flex-shrink:0}
 .lg-note{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.8}
+/* B2 split row */
+.lg-b2-split{padding:0 !important;border-right:1px solid rgba(0,0,0,.06)}
+.lg-b2-top{padding:14px 16px;border-bottom:2px solid rgba(0,0,0,.18)}
+.lg-b2-bot{padding:14px 16px}
+.lg-level-cell{border-right:1px solid rgba(0,0,0,.06) !important}
 </style>
 
 <style id="courses-extra-styles">
@@ -760,7 +766,7 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
           </thead>
           <tbody>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td rowspan="2" class="lg-level-cell"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
               <td class="lg-cefr">A1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
               <td>文字（ひらがな・カタカナ・基本的な漢字）を読むことができ、挨拶や自己紹介など決まった表現を使った短い会話ができる</td>
@@ -771,21 +777,28 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
               <td>身近なテーマの短い文章を読んで内容を理解できる。ゆっくり話してもらえれば日常会話をほぼ聞き取れる</td>
             </tr>
             <tr>
-              <td style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td class="lg-level-cell"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
               <td class="lg-cefr">B1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
               <td>日常的な場面の文章を読んで概要をつかめる。自然に近いスピードの会話でも、具体的な内容であれば理解できる</td>
             </tr>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
-              <td class="lg-cefr">B2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
-              <td>新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</td>
-            </tr>
-            <tr>
-              <td class="lg-cefr">C1/C2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
-              <td>論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-badge lg-badge-inter" style="opacity:.5;font-size:10.5px">中級 Intermediate</span></div>
+                <div class="lg-b2-bot"><span class="lg-badge lg-badge-adv">上級 Advanced</span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top lg-cefr">B2</div>
+                <div class="lg-b2-bot lg-cefr" style="color:var(--muted);font-size:13px">―</div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></div>
+                <div class="lg-b2-bot"><span class="lg-jlpt"><span class="lg-jlpt-pill">N1</span></span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top">新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</div>
+                <div class="lg-b2-bot">論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -897,7 +910,7 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
           </thead>
           <tbody>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td rowspan="2" class="lg-level-cell"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
               <td class="lg-cefr">A1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
               <td>文字（ひらがな・カタカナ・基本的な漢字）を読むことができ、挨拶や自己紹介など決まった表現を使った短い会話ができる</td>
@@ -908,21 +921,28 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
               <td>身近なテーマの短い文章を読んで内容を理解できる。ゆっくり話してもらえれば日常会話をほぼ聞き取れる</td>
             </tr>
             <tr>
-              <td style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td class="lg-level-cell"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
               <td class="lg-cefr">B1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
               <td>日常的な場面の文章を読んで概要をつかめる。自然に近いスピードの会話でも、具体的な内容であれば理解できる</td>
             </tr>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
-              <td class="lg-cefr">B2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
-              <td>新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</td>
-            </tr>
-            <tr>
-              <td class="lg-cefr">C1/C2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
-              <td>論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-badge lg-badge-inter" style="opacity:.5;font-size:10.5px">中級 Intermediate</span></div>
+                <div class="lg-b2-bot"><span class="lg-badge lg-badge-adv">上級 Advanced</span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top lg-cefr">B2</div>
+                <div class="lg-b2-bot lg-cefr" style="color:var(--muted);font-size:13px">―</div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></div>
+                <div class="lg-b2-bot"><span class="lg-jlpt"><span class="lg-jlpt-pill">N1</span></span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top">新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</div>
+                <div class="lg-b2-bot">論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -1009,7 +1029,7 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
           </thead>
           <tbody>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
+              <td rowspan="2" class="lg-level-cell"><span class="lg-badge lg-badge-basic">初級 Basic</span></td>
               <td class="lg-cefr">A1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill gold">N5</span></span></td>
               <td>文字（ひらがな・カタカナ・基本的な漢字）を読むことができ、挨拶や自己紹介など決まった表現を使った短い会話ができる</td>
@@ -1020,21 +1040,28 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
               <td>身近なテーマの短い文章を読んで内容を理解できる。ゆっくり話してもらえれば日常会話をほぼ聞き取れる</td>
             </tr>
             <tr>
-              <td style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
+              <td class="lg-level-cell"><span class="lg-badge lg-badge-inter">中級 Intermediate</span></td>
               <td class="lg-cefr">B1</td>
               <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N3</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N2</span></span></td>
               <td>日常的な場面の文章を読んで概要をつかめる。自然に近いスピードの会話でも、具体的な内容であれば理解できる</td>
             </tr>
             <tr>
-              <td rowspan="2" style="border-right:1px solid rgba(0,0,0,.06)"><span class="lg-badge lg-badge-adv">上級 Advanced</span></td>
-              <td class="lg-cefr">B2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></td>
-              <td>新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</td>
-            </tr>
-            <tr>
-              <td class="lg-cefr">C1/C2</td>
-              <td><span class="lg-jlpt"><span class="lg-jlpt-pill red">N1</span></span></td>
-              <td>論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-badge lg-badge-inter" style="opacity:.5;font-size:10.5px">中級 Intermediate</span></div>
+                <div class="lg-b2-bot"><span class="lg-badge lg-badge-adv">上級 Advanced</span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top lg-cefr">B2</div>
+                <div class="lg-b2-bot lg-cefr" style="color:var(--muted);font-size:13px">―</div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top"><span class="lg-jlpt"><span class="lg-jlpt-pill">N2</span><span class="lg-jlpt-sep">〜</span><span class="lg-jlpt-pill">N1</span></span></div>
+                <div class="lg-b2-bot"><span class="lg-jlpt"><span class="lg-jlpt-pill">N1</span></span></div>
+              </td>
+              <td class="lg-b2-split">
+                <div class="lg-b2-top">新聞・雑誌の記事など幅広いテーマの文章を読んで内容を理解できる。自然なスピードのニュースや会話を聞いて要点を把握できる</div>
+                <div class="lg-b2-bot">論説・評論など複雑で抽象的な文章も読みこなせる。講義やビジネスの場面でも自然に日本語でコミュニケーションできる</div>
+              </td>
             </tr>
           </tbody>
         </table>
