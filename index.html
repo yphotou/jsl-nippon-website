@@ -542,6 +542,24 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 /* B2 split row */
 .lg-table td:has(.lg-jlpt){text-align:center}
 .lg-level-cell{border-right:1px solid rgba(0,0,0,.06) !important;text-align:center;vertical-align:middle}
+
+/* === Stats Section === */
+.stat-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:960px;margin:0 auto}
+.stat-card{background:var(--navy2);border-radius:8px;padding:24px 20px;min-width:130px;max-width:170px;flex:1;text-align:center}
+.stat-num{font-family:var(--f-d);font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--gold);line-height:1.1}
+.stat-lbl{font-size:13px;color:rgba(255,255,255,.75);margin-top:8px;line-height:1.4}
+/* === Philosophy (new) === */
+.phil-grid{display:flex;flex-direction:column;gap:14px}
+.phil-card{background:white;border-radius:8px;padding:18px 22px;border-left:4px solid var(--red)}
+.phil-icon{font-weight:700;color:var(--red);font-size:14px;margin-bottom:6px}
+.phil-en{font-size:12px;color:var(--muted);font-weight:400}
+.phil-txt{font-size:14px;color:var(--navy);margin:0;line-height:1.7}
+/* === Teachers Section === */
+.tch-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;max-width:800px;margin:0 auto}
+.tch-card{background:var(--navy2);border-radius:8px;padding:32px 28px;flex:1;min-width:240px;max-width:360px;text-align:center}
+.tch-num{font-family:var(--f-d);font-size:clamp(40px,5vw,64px);font-weight:700;color:var(--gold);line-height:1}
+.tch-ttl{font-size:15px;font-weight:700;color:white;margin:12px 0 8px}
+.tch-txt{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin:0}
 </style>
 
 <style id="courses-extra-styles">
@@ -1130,28 +1148,86 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 <div class="page" id="page-about">
   <div class="ph">
     <div class="eyebrow gold">About JSL</div>
-    <h1 class="ph-h">SINCE 1986<br><em>38年の歩み</em></h1>
-    <p class="ph-sub">1986年の創立以来、世界中の留学生の「日本で生きる力」を育て続けてきた日本語教育のプロフェッショナル。</p>
+    <h1 class="ph-h">SINCE 1986<br><em>39年の歩み</em></h1>
+    <p class="ph-sub">1986年の創立以来、世界50カ国以上の留学生の「日本で生きる力」を育て続けてきた日本語教育のプロフェッショナル。</p>
   </div>
   <div class="bc"><a onclick="go('home')">ホーム</a> › <span>学校について</span></div>
 
-  <div class="about-cols">
-    <div>
-      <div class="eyebrow">Philosophy</div>
-      <div class="h2" style="font-size:clamp(30px,3.5vw,46px)">EDUCATIONAL<br>PHILOSOPHY</div>
-      <p class="sub-jp" style="margin-top:20px;margin-bottom:18px">"JSLでしか体験出来ない日本"が世界中の留学生から評価されています。1986年の創立以来培ってきたノウハウを活かし、学生のグローバル社会での成功をサポートします。</p>
-      <p class="sub-jp" style="margin-bottom:18px">東京・沖縄という特色のある2つの留学先、きめ細かい指導、開校38年以上の経験と実績。これらすべてがJSL日本アカデミーの誇りです。</p>
-      <p class="sub-jp">独自開発のEラーニングアプリ「JSL MeTHOD」を通じて、授業と自習を融合した新しい日本語教育のかたちを追求し続けています。</p>
+  <div class="sec stat-sec" style="background:var(--navy)">
+    <div class="eyebrow gold" style="text-align:center">BY THE NUMBERS</div>
+    <h2 class="white" style="text-align:center;margin-bottom:32px">JSLの実績</h2>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">1986</div>
+        <div class="stat-lbl">創立年</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">39年</div>
+        <div class="stat-lbl">の指導実績</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">50以上</div>
+        <div class="stat-lbl">の在籍学生の国籍数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2校</div>
+        <div class="stat-lbl">沖縄・東京キャンパス</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">ネイティブ日本語話者の教師</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">20名以下</div>
+        <div class="stat-lbl">の少人数クラス</div>
+      </div>
     </div>
-    <div>
-      <div class="eyebrow">History</div>
-      <div class="h2" style="font-size:clamp(30px,3.5vw,46px)">OUR HISTORY</div>
-      <div class="tl" style="margin-top:28px">
-        <div class="tl-item"><div class="tl-dot"><div class="tl-di"></div></div><div><div class="tl-yr">1986</div><p class="tl-tx">JSL日本アカデミー設立。沖縄校を開校し、外国人留学生への日本語教育を開始。</p></div></div>
-        <div class="tl-item"><div class="tl-dot"><div class="tl-di"></div></div><div><div class="tl-yr">2000年代</div><p class="tl-tx">東京校を開校。2キャンパス体制が整い、より多くの留学生を受け入れる体制に。</p></div></div>
-        <div class="tl-item"><div class="tl-dot"><div class="tl-di"></div></div><div><div class="tl-yr">2007</div><p class="tl-tx">グループ専門学校「JSLインターナショナルカレッジ」を沖縄・浦添市に設立。国際観光ビジネス科を開設。</p></div></div>
-        <div class="tl-item"><div class="tl-dot"><div class="tl-di"></div></div><div><div class="tl-yr">2020年代</div><p class="tl-tx">独自EラーニングアプリJSL MeTHODを開発・運用開始。デジタルと対面学習を融合。</p></div></div>
-        <div class="tl-item"><div class="tl-dot"><div class="tl-di"></div></div><div><div class="tl-yr">現在</div><p class="tl-tx">50以上の国籍の学生が在籍。38年の実績を持つ日本語教育機関として引き続き世界中の留学生を迎えています。</p></div></div>
+  </div>
+
+  <div class="sec" style="background:var(--blush);padding:64px 24px 80px">
+    <div style="max-width:960px;margin:0 auto">
+      <div class="eyebrow">PHILOSOPHY</div>
+      <div class="h2">WHY STUDY WITH JSL?</div>
+      <p class="ns-sub" style="margin-top:16px;max-width:560px">日本語を学ぶことは、言葉だけでなく、日本という国を丸ごと理解すること。JSLが大切にする5つの済で、日本社会でしっかり生きていける力を養います。</p>
+      <div class="phil-grid" style="margin-top:32px;max-width:600px">
+      <div class="phil-card">
+        <div class="phil-icon">言語<span class="phil-en"> Language</span></div>
+        <p class="phil-txt">読む・書く・聴く・話す04技能をバランスよく、実践的に習得します。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">文化<span class="phil-en"> Culture</span></div>
+        <p class="phil-txt">日本文化への理解を深め、日本人と対等にコミュニケーションできる素地を作ります。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">ルール・マナー<span class="phil-en"> Rules & Manners</span></div>
+        <p class="phil-txt">日本社会で求められるルールやマナーを学び、職場・日常生活で自信を持って行動できるようにします。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">日常生活<span class="phil-en"> Daily Life</span></div>
+        <p class="phil-txt">住居・医療・行政手続きなど、日本での生活に必要な知識と対応力を身につけます。</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">キャリア<span class="phil-en"> Career Path</span></div>
+        <p class="phil-txt">進学・就職・帰国後のキャリアまで、一人ひとりの目標に合わせた進路サポートを行います。</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:var(--navy);padding:64px 24px">
+    <div class="eyebrow gold" style="text-align:center">TEACHERS</div>
+    <h2 class="white" style="text-align:center;margin-bottom:8px">TEACHER QUALIFICATIONS</h2>
+    <p style="text-align:center;color:rgba(255,255,255,.7);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto">JSLの全教師は、高い専門性と情熱を持つネイティブ日本語話者です。</p>
+    <div class="tch-grid">
+      <div class="tch-card">
+        <div class="tch-num">100%</div>
+        <div class="tch-ttl">ネイティブ日本語話者</div>
+        <p class="tch-txt">すべての授業を日本語ネイティブの教師が担当。自然な発音・表現・文化背景を直接学べます。</p>
+      </div>
+      <div class="tch-card">
+        <div class="tch-num">100%</div>
+        <div class="tch-ttl">日本語教育資格保持</div>
+        <p class="tch-txt">全教師が日本語教師の資格を保有。科学的な指導法に基づいた質の高い授業を提供します。</p>
       </div>
     </div>
   </div>
@@ -1159,11 +1235,11 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
   <div class="method-sec">
     <div class="eyebrow gold">JSL MeTHOD</div>
     <div class="h2 white" style="font-size:clamp(32px,4vw,50px)">EXCLUSIVE<br>E-LEARNING</div>
-    <p class="sub-jp" style="color:rgba(255,255,255,.42);margin-top:8px;max-width:600px">他の日本語学校にはない独自のデジタル学習ツール。授業と連動したコンテンツでいつでもどこでも学習できます。全コースの学生が無料で利用できます。</p>
+    <p class="sub-jp" style="color:rgba(255,255,255,.42);margin-top:8px;max-width:600px">他の日本語学校にはない独自のデジタル学習ツール。授業と連動したコンテンツでいつでもどこでも学習できます。</p>
     <div class="mf-grid">
       <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">マルチデバイス対応</div><p class="mf-txt">スマートフォン・タブレット・PCすべてに対応。通学中でも帰宅後でも学習できます。</p></div>
       <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">授業と完全連動</div><p class="mf-txt">クラスで学んだ内容とリンクしたコンテンツを提供。予習・復習の効率を最大化します。</p></div>
-      <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">全学生・全コース無料</div><p class="mf-txt">進学・一般・短期のすべての学生が、追加費用なしでアクセスできます。</p></div>
+      <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">全コースに含まれる独自ツール</div><p class="mf-txt">進学・一般・短期のすべての学生がアクセスできます。</p></div>
       <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">学習進捗の可視化</div><p class="mf-txt">学習時間・正答率などを可視化。自分の弱点を把握して効率よく学習できます。</p></div>
       <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">JLPT対策コンテンツ</div><p class="mf-txt">JLPT各レベルの対策問題を豊富に収録。試験直前期の集中学習にも対応します。</p></div>
       <div class="mf-card"><div class="mf-ico"></div><div class="mf-ttl">他校にはない独自ツール</div><p class="mf-txt">JSLが独自に開発したプラットフォーム。市販アプリでは実現できない授業連動の学習体験を提供。</p></div>
