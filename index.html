@@ -606,6 +606,180 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
 .step-t{margin-bottom:4px}
 .step-d{margin-bottom:0}
 .step-arr{position:static;transform:none;width:auto;height:auto;border:none;border-radius:0;background:transparent;font-size:16px;color:var(--red);font-weight:700;text-align:center;padding:4px 0 0 68px;display:block;line-height:1}
+
+@media (max-width: 768px) {
+
+  /* ナビ */
+
+  nav { padding: 0 20px; }
+
+  .nav-center { display: none; }
+
+  .nav-lang { display: none; }
+
+  .nav-cta { padding: 8px 16px; font-size: 11px; }
+
+  /* ヒーロー */
+
+  .hero-content { padding: 0 24px 48px; }
+
+  .hero-h1 { font-size: clamp(48px, 12vw, 80px); }
+
+  .hero-h1-ja { font-size: 16px; }
+
+  .hero-ctas { flex-direction: column; gap: 12px; }
+
+  .hero-stats { flex-wrap: wrap; gap: 0; }
+
+  .hero-stat { padding: 12px 20px; width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.15); }
+
+  .hero-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.15); }
+
+  .scroll-hint { display: none; }
+
+  /* ニュースストリップ */
+
+  .news-strip { grid-template-columns: 1fr; padding: 0 24px; min-height: auto; }
+
+  .ns-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding: 32px 0 24px; }
+
+  .ns-right { padding: 24px 0; }
+
+  .ns-item { grid-template-columns: 80px 1fr; gap: 12px; }
+
+  .ns-tag { display: none; }
+
+  /* WHY JSL */
+
+  .values-section { padding: 60px 24px; }
+
+  .values-grid { grid-template-columns: 1fr; }
+
+  /* コースカード */
+
+  .course-cards-row { grid-template-columns: 1fr; }
+
+  .cc { min-height: 320px; }
+
+  .cs-header { padding: 0 24px; }
+
+  .cs-head-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  /* MeTHOD */
+
+  .method-section { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
+
+  /* キャンパスカード */
+
+  .campus-cards { grid-template-columns: 1fr; }
+
+  .camp-card { min-height: 360px; }
+
+  .campus-header { padding: 60px 24px 40px; }
+
+  /* 卒業生の声 */
+
+  .voices-section { padding: 60px 24px; }
+
+  .voices-header { grid-template-columns: 1fr; gap: 24px; }
+
+  .voice-grid { grid-template-columns: 1fr; }
+
+  /* グループ校 */
+
+  .group-section { padding: 60px 24px; }
+
+  .group-cards { grid-template-columns: 1fr; }
+
+  /* CTA */
+
+  .home-cta { grid-template-columns: 1fr; padding: 60px 24px; gap: 32px; }
+
+  .hcta-phones { flex-direction: column; gap: 12px; }
+
+  /* ページ共通 */
+
+  .s80, .s100, .s60 { padding: 48px 24px; }
+
+  .page-hero { padding: 60px 24px 52px; }
+
+  .bc { padding: 12px 24px; }
+
+  /* コースページ */
+
+  .course-tabs { padding: 0 24px; overflow-x: auto; white-space: nowrap; }
+
+  .cd-content { padding: 36px 24px; }
+
+  .cd-body { padding: 40px 24px; }
+
+  .cd-grid { grid-template-columns: 1fr; }
+
+  /* 入学案内 */
+
+  .steps-row { grid-template-columns: 1fr 1fr; }
+
+  .fee-tbl { font-size: 12px; }
+
+  .fee-tbl th, .fee-tbl td { padding: 10px 12px; }
+
+  /* 実績 */
+
+  .results-stats { grid-template-columns: 1fr 1fr; }
+
+  .dest-grid { grid-template-columns: 1fr 1fr; }
+
+  /* キャンパスページ */
+
+  .campus-full { padding: 48px 24px; }
+
+  .cfc-body { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+
+  /* 学校について */
+
+  .about-split { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+
+  .method-full { padding: 48px 24px; }
+
+  .mf-grid { grid-template-columns: 1fr; }
+
+  /* グループページ */
+
+  .gf-top { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; }
+
+  .gf-bot { padding: 20px 24px; flex-direction: column; gap: 12px; }
+
+  /* フッター */
+
+  footer { padding: 48px 24px 32px; }
+
+  .ft { grid-template-columns: 1fr 1fr; gap: 32px; }
+
+  .f-bot { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* pill ボタン */
+
+  .pill-btn { padding: 12px 24px; font-size: 13px; }
+
+}
+
+@media (max-width: 480px) {
+
+  .steps-row { grid-template-columns: 1fr; }
+
+  .results-stats { grid-template-columns: 1fr 1fr; }
+
+  .dest-grid { grid-template-columns: 1fr; }
+
+  .ft { grid-template-columns: 1fr; }
+
+  .hero-stat { width: 50%; }
+
+  .hcta-right { width: 100%; }
+
+  .ns-item { grid-template-columns: 70px 1fr; }
+
+}
 </style>
 
 </head>
