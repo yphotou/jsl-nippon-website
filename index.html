@@ -737,6 +737,81 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
   .gf-top { padding: 20px 16px; }
   .gf-bot { padding: 14px 16px; }
 }
+
+/* == HAMBURGER & DRAWER == */
+.n-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background .2s;
+  z-index: 310;
+  flex-shrink: 0;
+}
+.n-burger:hover { background: rgba(255,255,255,.1); }
+.n-burger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .2s ease, width .3s ease;
+  transform-origin: center;
+}
+.n-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.n-burger.open span:nth-child(2) { opacity: 0; width: 0; }
+.n-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.n-drawer {
+  position: fixed;
+  top: 56px; left: 0; right: 0; bottom: 0;
+  background: var(--navy);
+  z-index: 290;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform .32s cubic-bezier(.4,0,.2,1);
+  overflow-y: auto;
+}
+.n-drawer.open { transform: translateX(0); }
+.n-drawer-links { list-style: none; padding: 8px 0; flex: 1; }
+.n-drawer-links li { border-bottom: 1px solid rgba(255,255,255,.07); }
+.n-drawer-links a {
+  display: flex;
+  align-items: center;
+  padding: 17px 24px;
+  font-family: var(--f-j);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,.88);
+  cursor: pointer;
+  transition: background .18s, color .18s;
+  text-decoration: none;
+}
+.n-drawer-links a:hover, .n-drawer-links a:active { background: rgba(255,255,255,.06); color: white; }
+.n-drawer-links a::after { content: "›"; margin-left: auto; font-size: 20px; color: var(--gold); opacity: .7; }
+.n-drawer-foot { padding: 20px 24px 36px; border-top: 1px solid rgba(255,255,255,.1); }
+.n-drawer-foot .n-cta { width: 100%; padding: 14px; font-size: 15px; border-radius: 4px; text-align: center; }
+.n-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 280;
+  opacity: 0;
+  transition: opacity .32s;
+}
+.n-overlay.open { opacity: 1; }
+body.menu-open { overflow: hidden; }
+@media (max-width: 768px) {
+  .n-burger { display: flex; }
+  .n-overlay { display: block; }
+}
 </style>
 
 </head>
@@ -759,8 +834,26 @@ footer{background:var(--navy);border-top:4px solid var(--gold);padding:56px 60px
     <button class="n-lang" style="">EN / 中文 / 한국어</button>
     <button class="n-cta" onclick="go('admission')" style="">無料相談</button>
   </div>
+
+  <button class="n-burger" id="n-burger" aria-label="menu" aria-expanded="false" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="n-drawer" id="n-drawer" aria-hidden="true">
+  <ul class="n-drawer-links">
+    <li><a onclick="go('about');closeMenu()">学校について</a></li>
+    <li><a onclick="go('courses');closeMenu()">コース</a></li>
+    <li><a onclick="go('admission');closeMenu()">入学案内</a></li>
+    <li><a onclick="go('campuses');closeMenu()">キャンパス</a></li>
+    <li><a onclick="go('results');closeMenu()">卒業生・実績</a></li>
+    <li><a onclick="go('group');closeMenu()">グループ校</a></li>
+  </ul>
+  <div class="n-drawer-foot">
+    <button class="n-cta" onclick="go('admission');closeMenu()">無料相談</button>
+  </div>
+</div>
+<div class="n-overlay" id="n-overlay" onclick="closeMenu()"></div>
 <div id="app">
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2029,6 +2122,25 @@ window.addEventListener('load',()=>{
   const h=location.hash.replace('#','');
   if(h){const[pid,sub]=h.split('-');if(pages.includes(pid))go(pid,sub)}
 });
+
+function toggleMenu(){
+  var b=document.getElementById('n-burger');
+  var d=document.getElementById('n-drawer');
+  var o=document.getElementById('n-overlay');
+  if(d.classList.contains('open')){closeMenu();return;}
+  b.classList.add('open');b.setAttribute('aria-expanded','true');
+  d.classList.add('open');d.setAttribute('aria-hidden','false');
+  o.classList.add('open');document.body.classList.add('menu-open');
+}
+function closeMenu(){
+  var b=document.getElementById('n-burger');
+  var d=document.getElementById('n-drawer');
+  var o=document.getElementById('n-overlay');
+  if(!b)return;
+  b.classList.remove('open');b.setAttribute('aria-expanded','false');
+  d.classList.remove('open');d.setAttribute('aria-hidden','true');
+  o.classList.remove('open');document.body.classList.remove('menu-open');
+}
 </script>
 
 
